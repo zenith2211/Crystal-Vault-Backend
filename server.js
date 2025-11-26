@@ -14,7 +14,7 @@ app.use(cors({
 }));
 
 app.use(express.json());
-
+console.log(process.env.MONGODB_URI);
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/inventory', require('./routes/inventory'));
@@ -23,7 +23,7 @@ app.use('/api/dashboard', require('./routes/dashboard'));
 app.use('/api/profit-loss', require('./routes/profitLoss'));
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://zenith01yt_db_user:Zenith1912@cluster0.xku74ke.mongodb.net/?appName=Cluster0', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
