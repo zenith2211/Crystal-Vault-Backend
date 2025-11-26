@@ -14,7 +14,7 @@ app.use(cors({
 }));
 
 app.use(express.json());
-console.log(process.env.MONGODB_URI);
+
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/inventory', require('./routes/inventory'));
