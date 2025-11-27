@@ -88,6 +88,7 @@ router.post('/', auth, async (req, res) => {
         totalAmount: itemSubtotal,
         weight: inventoryItem.weight,
         grossWeight: item.grossWeight || 0,
+        netWeight: item.netWeight || 0,
         labourPerGram: item.labourPerGram || 0,
         diamondPerCarat: item.diamondPerCarat || 0,
         fineGold: item.fineGold || 0,

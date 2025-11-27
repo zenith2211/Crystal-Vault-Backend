@@ -9,6 +9,7 @@ const BillItemSchema = new mongoose.Schema({
     sellingPrice: Number,
     totalAmount: Number,
     grossWeight: { type: Number, default: 0 },
+    netWeight: { type: Number, default: 0 },
     labourPerGram: { type: Number, default: 0 },
     diamondPerCarat: { type: Number, default: 0 },
     fineGold: { type: Number, default: 0 },
